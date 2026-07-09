@@ -1,0 +1,18 @@
+{
+  "bars": [
+    {"symbols": ["BTC-USD", "ETH-USD"], "asset": "crypto",
+     "timeframes": ["1d"], "years": 0.2, "out": "smoke_out/crypto"},
+    {"symbols": ["SPY", "AAPL"], "asset": "equity",
+     "timeframes": ["1d"], "years": 0.2, "out": "smoke_out/stocks"},
+    {"symbols": ["EURUSD", "GBPUSD"], "asset": "forex",
+     "timeframes": ["1d"], "years": 0.2, "out": "smoke_out/fx"},
+    {"symbols": ["GC", "CL"], "asset": "future",
+     "timeframes": ["1d"], "years": 0.2, "out": "smoke_out/futures"},
+    {"symbols": ["^GSPC"], "asset": "index",
+     "timeframes": ["1d"], "years": 0.5, "out": "smoke_out/index"}
+  ],
+  "funding": [
+    {"symbols": ["BTC-USD", "ETH-USD"], "source": "hyperliquid",
+     "years": 0.1, "out": "smoke_out/funding"}
+  ]
+}

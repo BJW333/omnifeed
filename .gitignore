@@ -1,0 +1,22 @@
+# omnifeed cache + downloaded datasets
+.omnifeed/
+data/
+intraday_data/
+funding_data/
+smoke_out/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/

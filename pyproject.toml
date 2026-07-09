@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnifeed"
+version = "0.1.0"
+description = "One interface for market data across crypto, equities, forex, futures, indices and perp funding."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Blake Weiss" }]
+keywords = ["market-data", "ohlcv", "crypto", "equities", "forex", "futures", "funding", "quant", "backtesting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "pandas>=1.5",
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+# stocks / ETFs / forex / futures / indices
+stocks = ["yfinance>=0.2.40", "lxml>=4.9"]
+# any CCXT exchange for crypto
+ccxt = ["ccxt>=4.0"]
+# faster/typed local cache (else falls back to pickle)
+fast = ["pyarrow>=12"]
+# YAML run-configs (JSON always works without this)
+yaml = ["pyyaml>=6"]
+# everything
+all = ["yfinance>=0.2.40", "lxml>=4.9", "ccxt>=4.0", "pyarrow>=12", "pyyaml>=6"]
+
+[project.urls]
+Homepage = "https://github.com/BJW333/omnifeed"
+Repository = "https://github.com/BJW333/omnifeed"
+
+[project.scripts]
+omnifeed = "omnifeed.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["omnifeed*"]
